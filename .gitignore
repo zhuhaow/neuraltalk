@@ -1,2 +1,6 @@
 *.pyc
 cv/*.p
+
+.idea/
+data/*
+status/*.json

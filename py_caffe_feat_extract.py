@@ -11,11 +11,11 @@ import time
 import scipy.io
 
 
-def reduce_along_dim(img , dim , weights , indicies): 
+def reduce_along_dim(img, dim, weights, indicies):
     '''
     Perform bilinear interpolation given along the image dimension dim
     -weights are the kernel weights 
-    -indicies are the crossponding indicies location
+    -indices are the corresponding indices location
     return img resize along dimension dim
     '''
     other_dim = abs(dim-1)       
@@ -155,7 +155,7 @@ def preprocess_image(img):
     img = np.transpose(img, [2,0,1])
     return img #HxWx3
         
-def caffe_extract_feats(path_imgs , path_model_def , path_model , WITH_GPU = True , batch_size = 10 ):
+def caffe_extract_feats(path_imgs, path_model_def , path_model , WITH_GPU = True , batch_size = 10 ):
     '''
     Function using the caffe python wrapper to extract 4096 from VGG_ILSVRC_16_layers.caffemodel model
     
@@ -255,8 +255,3 @@ if __name__ == '__main__':
     scipy.io.savemat(out_path , vgg_feats)
     
     print "Have a Good day!"
-    
-    
-    
-    
-   
