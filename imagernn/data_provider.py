@@ -39,9 +39,9 @@ class BasicDataProvider:
         """ create an image structure for the driver """
 
         # lazily fill in some attributes
-        if img not in 'local_file_path':
+        if 'local_file_path' not in img:
             img['local_file_path'] = os.path.join(self.image_root, img['filename'])
-        if img not in 'feat':  # also fill in the features
+        if 'feat' not in img:  # also fill in the features
             feature_index = img['imgid']  # NOTE: imgid is an integer, and it indexes into features
             img['feat'] = self.features[:, feature_index]
         return img
