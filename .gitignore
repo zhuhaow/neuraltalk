@@ -1,6 +1,13 @@
+eval/reference*
+eval/output
+result_struct.json
+eval/reference*
+eval/output
+result_struct.json
 *.pyc
-cv/*.p
-
+env/
+.env
+cv/model_checkpoint*
+data/
 .idea/
-data/*
 status/*.json
